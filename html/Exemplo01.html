@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function mostrar() {
+        //alert ("teste")
+        alert("teste");
+        var conteudo = document.getElementById("conteudo");
+        conteudo.innerHTML = "Texto diferente";
+        conteudo.style.color = "purple";
+        conteudo.style.backgroundColor = "black";
+      }
+      function voltarCor(){
+        var conteudo = document.getElementById("conteudo");
+        conteudo.style.color = "black";
+        conteudo.style.backgroundColor = "white";
+      }
+      function mudarCor(){
+        conteudo.style.color = "purple";
+        conteudo.style.backgroundColor = "black";
+      }
+      function animacao(){
+        var anima = document.getElementById("animacao");
+        anima.classList.toggle('fade');
+      }
+      <style>
+        #animacao {
+            opacity:1;
+            transition: opacity:0;
+        }
+        #animacao.fade{
+            opacity:0;
+        }
+      </style>
+    </script>
+  </head>
+
+  <body>
+    <h1>Exemplo JavaScript</h1>
+    <p id="conteudo" onmouseover="mudarCor(this)" onmouseout="voltarCor(this)">Texto qualquer</p>
+    <button onclick="mostrar()">Clique aqui!</button>
+
+    <p id "animacao">Texto Animação</p>
+  </body>
+</html>

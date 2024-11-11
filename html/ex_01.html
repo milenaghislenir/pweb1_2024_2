@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário HTML</title>
+
+    <script>
+        function formulario(event){
+            event.preventDefault();
+            var pnome = document.getElementById("pnome").value;
+            var unome = document.getElementById("unome").value;
+            console.log(pnome);
+            alert(pnome + "-" + unome);
+
+            var pnome = document.getElementByName("informatics").value;
+            var unome = document.getElementByName("analysis").value;
+            var unome = document.getElementByName("web").value; //AQUI TA DANDO ERROOOOOOOOOOOOOOOOOOOOOOOOOO
+            console.log(informatics);
+            alert(informatics + "-" + analysis + "-" + web);
+        }
+    </script>
+</head>
+    <body>
+        <form action="/action_page.html">
+            <fieldset>
+            <legend><b>Formulário Matrícula de Curso </b></legend>
+            
+                <label for="pnome">Primeiro nome:</label><br>
+                <input type="text" id="pnome" name="pnome"><br>
+                <label for="unome">Último nome:</label><br>
+                <input type="text" id="unome" name="unome">
+            
+                
+                <p><b>Curso:</b></p>
+                <input type="radio" id="informatics" name="course" value="Técnico em Informática">
+                <label for="informatics">Técnico em Informática</label><br>
+                <input type="radio" id="analysis" name="course" value="Graduação - Análise e Desenvolvimento de Sistemas">
+                <label for="analysis">Graduação - Análise e Desenvolvimento de Sistemas</label><br>
+                <input type="radio" id="web" name="course" value="Profissionalizante - Programação Web">
+                <label for="web">Profissionalizante - Programação Web</label>
+            
+
+                <p><b>Linguagens de programação de sua preferência:</b></p>
+                <input type="checkbox" id="language1" name="language1" value="PHP">
+                <label for="language1"> PHP</label><br>
+                <input type="checkbox" id="language2" name="language2" value="Java">
+                <label for="language2"> Java</label><br>
+                <input type="checkbox" id="language3" name="language3" value="Python">
+                <label for="language3"> Python</label>
+            
+            <br>
+            <br>
+            <label for="shift"><b>Escolha um turno:</b></label>
+            <select name="shift" id="shift">
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+            <option value="noite">Noite</option>
+            </select>
+            <br>
+            <br>
+            <label for="browser"> <b>Escolha uma unidade mais próxima a você:</b></label>
+            <br>
+            <input list="browsers" name="browser" id="browser">
+            <datalist id="browsers">
+            <option value="Chape City">
+            <option value="Curitiba">
+            <option value="Tokyo">
+            <option value="Cairo">
+            <option value="Palmitos">
+            <option value="Xanxas City">
+            </datalist>
+            </fieldset>
+            </form>
+            <br>
+            <br>
+        <input type="submit" values="Enviar" onclick="formulario(event)"/>
+    </body>
+</html>
