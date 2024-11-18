@@ -8,7 +8,7 @@ if (!empty($_POST)) {
     // get -> variavel global nativa do php q pega todos os dados do form (get é um vetor que pega cada dado do input)
     //var_dump($_GET['nome']); //var_dump = printf // nome -> índice pra acessar o vetor
 
-    echo "<div class="alert alert-warning" role="alert">
+    echo "<div class='alert alert-warning' role='alert'>
     <b>Registro salvo com sucesso!</b>
     <br>
     Nome:{$_POST['nome']} E-mail:{$_POST['email']} Mensagem:{$_POST['mensagem']}
